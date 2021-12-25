@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+            html {
+                margin: 0;
+                padding: 0;
+            }
+        </style> 
+    </head>
+
+    <body>
+        <table align="center" bgcolor=" gray" >
+            <tr>
+                <td width="500px">
+                    <h1> feedback form</h1>
+                    <div>
+                        <label for="name">name: </label> 
+                        <input type="text" name="text" id="text" >
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required placeholder="Email" min="6" max="32">
+                </div>
+                <div>
+                    <p>please check all the emotions that apply to you</p>
+                    
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="emotions" /><label for="emotions">Angry</label
+                >
+              </li>
+              <li>
+                <input type="checkbox" id="emotions" /><label for="emotions"
+                  >Sad</label
+                >
+              </li>
+              <li>
+                <input type="checkbox" id="emotions" /><label for="emotions"
+                  >Happy</label
+                >
+              </li>
+              <li>
+                <input type="checkbox" id="emotions" /><label for="emotions"
+                  >Ambivalent</label
+                >
+              </li>
+            </ul>
+                </div>
+
+                <div>
+                    <p>How satisfied were you wit our service?</p>
+                    
+                    <ul>
+                        <li>
+                            <input type="radio" id="service" /><label for="service">Very satisfied</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="service" /><label for="service"
+                  >Satisfied</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="service" /><label for="service"
+                  >Don't cate</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="service" /><label for="service"
+                  >Dissatisfied</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="service" /><label for="service"
+                  >Very dissatisfied</label
+                >
+              </li>
+            </ul>
+                </div>
+
+                <div>
+                    <lable for="comment"> Further comments</lable>
+                    <textarea id="comment" rows="2" cols="50%"></textarea>
+
+                </div>
+
+
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
