@@ -94,15 +94,16 @@
                     <p>
                         <h3>New Podcast</h3>
                         <h1>Jack Ma - How I Overcame Failure</h1>
-                        <audio controls>
+                        <audio controls  onpause="myFunction()" onplay="functionPlay()">
                             <source src="../../resources/audio/Jack Ma - How I Overcame Failure.mp3">
                         </audio> 
                         <hr>
                         <h3>Pick of The Week</h3>
                         <h1>24 Hours A Day</h1>
-                        <video controls width="80%">
-                            <source src="../../resources/video/24_HOURS.mp4">
-                        </video>
+                        <video controls width="80%" >
+                            <video controls width="950px" onpause="myFunction()" onplay="functionPlay()">
+                                <source src="../../resources/video/24_HOURS.mp4" type="video/mp4" />
+                              </video>
 
                     </p>
                     
@@ -176,6 +177,14 @@ Third     1GB Mobile Data
         
 
 
-    
+        <script>
+            function myFunction() {
+              alert("The media was paused");
+            }
+      
+            let functionPlay = () => {
+              alert("The media is Playing!");
+            };
+          </script>
     </body>
 </html>
