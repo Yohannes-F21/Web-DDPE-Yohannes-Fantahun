@@ -70,105 +70,67 @@
                 <td width="150px"></td>
                 <td valign="top"> 
                     <h1> Register</h1>
-                    <p>
-                       
-                    <form>
-                        <div>
-                                <label for="name">Full name: </label> <br>
-                                <input type="text" name="text" id="text" required  maxlength="50" size="50%">
-                        </div>
-                        
-                        <div>
-                            <label for="phone">phone: </label><br>
-                            <input type="tel" name="phone" id="phone" required size="50%" > 
-                        </div>
-                        
-                        <div>
-                            <label for="age">Age: </label><br>
-                            <input type="number" name="age" id="age"  required max="20" min="18" >    
-                        </div>
-                        <div>
-                            <label for="color"> Your favorite color</label><br>
-                            <input type="color" name="color" id="color" >
-                        </div>
-
-                        <div>
-                            <label for="B_date">Birthday</label><br>
-                            <input type="date" name="B_date" id="B_date">
-                        </div>
-
-                        <div>
-                            Gender <br>
-                            <label for="sex">Male</label>
-                            <input type="radio" name="sex" id="sex">
-                            <label for="sex">female</label>
-                            <input type="radio" name="sex" id="sex">
-                        
-                        </div>
-
-
-                        <div>
-                            <label for="password">password: </label><br>
-                            <input type="password" name="password" id="password" required minlength="6" maxlength="32" >
-                        </div>
-
-                        <div>
-                            <label for="password">Confirm password: </label><br>
-                            <input type="password" name="password" id="password" required minlength="6" maxlength="32" >
-                        </div>
-
-                        <div>
-                            Skills
-                            <ul>
-                                <li>
-                                    <input type="checkbox" name="skills" id="chackbox">
-                                    <label for="checkbox">HTML</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="skills" id="chackbox">
-                                    <label for="checkbox">CSS</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="skills" id="chackbox">
-                                    <label for="checkbox">Java script</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="skills" id="chackbox">
-                                    <label for="checkbox">PHP</label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <lable for="country">Country</lable><br>
-                            <select name="country" id="country">
-
-                                <option value="ethiopia">Ethiopia</option>
-                                <option value="USA">USA</option>
-                                <option value="Russia">Russia</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="photo">Photo</label><br>
-                            <input type="file" name="photo" id="photo">
-                        </div>
-
-                        <div>
-                            <label for="describe">Describe Your self</label> <br>
-                            <input type="text area " id="describe" name="describe" width="600px" height="1000px">
-                        </div>
-                        <div>
-                            <button type="submit">Submit</button>
-                            <button type="reset"> Reset</button>
-                        </div>
-
-                       <textarea id="describe" rows="8" cols="50%" placeholder="Say Something"></textarea>
-
-
-
-                    </form>
-                    </p>
+                    <form action="" onsubmit="confirmInput()" onreset="message()">
+                        <label for="fullname">Full Name</label><br />
+                        <input type="text" id="fullname" size="50%" required maxlength="50" onfocus="highilightInput(this)" /><br />
+                        <label for="phone">Phone</label><br />
+                        <input type="tel" id="phone" size="50%" required onfocus="highilightInput(this)" /><br />
+                        <label for="age">Age</label><br />
+                        <input type="number" id="age" min="8" max="100" onfocus="highilightInput(this)" /><br />
+                        <label for="color">Your Favorite Color</label><br />
+                        <input type="color" id="color" onfocus="highilightInput(this)" /><br />
+                        <label for="birth">Birthdate</label><br />
+                        <input type="date" id="birth" onfocus="highilightInput(this)" /><br />
+                        <label for="gender">Gender</label><br />
+                        <input type="radio" id="gender" /><label for="male">Male</label>
+                        <input type="radio" id="gender" /><label for="female">Female</label
+                ><br />
+                <label for="password">Password</label><br />
+                        <input type="password" id="password" minlength="6" maxlength="32" required size="50%" onfocus="highilightInput(this)" /><br />
+                        <label for=" password ">Confirm Password</label><br />
+                        <input type="password " id="password " minlength="6 " maxlength="32 " required size="50%" onfocus="highilightInput(this)" /><br />
+    
+                        <label for="skills">Skills</label><br />
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="gender" /><label for="html">HTML</label
+                    >
+                  </li>
+                  <li>
+                    <input type="checkbox" id="gender" /><label for="CSS"
+                      >CSS</label
+                    >
+                  </li>
+                  <li>
+                    <input type="checkbox" id="gender" /><label for="JavaScript"
+                      >JavaScript</label
+                    >
+                  </li>
+                  <li>
+                    <input type="checkbox" id="gender" /><label for="php"
+                      >PHP</label
+                    >
+                  </li>
+                </ul>
+    
+                <label for="country">Country</label><br />
+                                <select name="country" id="country" onchange="changeCountry()">
+                  <option value="ethiopia" selected>Ethiopia</option>
+                  <option value="kenya">Kenya</option>
+                  <option value="somalia">Somalia</option>
+                  <option value="djibouti">Djibouti</option>
+                  <option value="sudan">Sudan</option>
+                  <option value="eritrea">Eritrea</option>
+                </select>
+                                <br />
+                                <label for="photo">Photo</label><br />
+                                <input type="file" id="photo" name="avatar" accept="image/png, image/jpeg" /><br />
+                                <label for="describe">Describe Yourself</label><br />
+                                <textarea id="describe" rows="8" cols="50%" placeholder="Say Something"></textarea
+                ><br />
+                <input type="submit" value="Submit" />
+                <input type="Reset" />
+              </form>
                     
                 </td> 
         
@@ -240,6 +202,23 @@ Third     1GB Mobile Data
         
 
 
-    
+        <script>
+            function highilightInput(x) {
+              x.style.background = "lightgray";
+            }
+      
+            function confirmInput() {
+              document.write("You do Clicked the Submit Button");
+            }
+      
+            function changeCountry() {
+              prefer = document.forms[0].country.value;
+              alert("You Chose " + prefer);
+            }
+      
+            let message = () => {
+              alert("This alert box was triggered by the onreset event handler");
+            };
+          </script>
     </body>
 </html>
