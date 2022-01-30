@@ -19,6 +19,14 @@
                 padding: 0;
             }
         </style> -->
+        <style>
+            #addp {
+                color: brown;
+                border: 5px solid black;
+                background-color: aquamarine;
+            } 
+        </style>
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -93,15 +101,22 @@
                     <hr>
                     <p>
                         <h3>New Podcast</h3>
-                        <h1>Jack Ma - How I Overcame Failure</h1>
-                        <audio controls  onpause="myFunction()" onplay="functionPlay()">
+                        <h1 id="jack">Jack Ma - How I Overcame Failure</h1>
+                        <audio id="aud" controls  onpause="myFunction()" onplay="functionPlay()">
                             <source src="../../resources/audio/Jack Ma - How I Overcame Failure.mp3">
                         </audio> 
                         <hr>
+                        <p id="btnp">
+                            <button id="btn1" type="button" onclick='doSwap("aud","vid")'>swap</button>
+                            <button id="btn2" type="button" onclick="removeNode()">Remove element</button>
+                            <button id="btn3" type="button" onclick="addNode()">Add element</button>
+                            
+                        </p>
                         <h3>Pick of The Week</h3>
                         <h1>24 Hours A Day</h1>
-                        <video controls width="80%" >
-                            <video controls width="950px" onpause="myFunction()" onplay="functionPlay()">
+
+                       
+                            <video id="vid" controls width="80%" onpause="myFunction()" onplay="functionPlay()">
                                 <source src="../../resources/video/24_HOURS.mp4" type="video/mp4" />
                               </video>
 
@@ -177,14 +192,6 @@ Third     1GB Mobile Data
         
 
 
-        <script>
-            function myFunction() {
-              alert("The media was paused");
-            }
-      
-            let functionPlay = () => {
-              alert("The media is Playing!");
-            };
-          </script>
+        
     </body>
 </html>
