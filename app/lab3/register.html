@@ -19,6 +19,7 @@
                 padding: 0;
             }
         </style> -->
+        <script src="submit.js"></script>
         
     </head>
 
@@ -129,8 +130,9 @@
                                 <label for="describe">Describe Yourself</label><br />
                                 <textarea id="describe" rows="8" cols="50%" placeholder="Say Something"></textarea
                 ><br />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" id="submitBtn"/>
                 <input type="Reset" />
+                <div id="render"></div>
               </form>
                     
                 </td> 
@@ -220,6 +222,8 @@ Third     1GB Mobile Data
             let message = () => {
               alert("This alert box was triggered by the onreset event handler");
             };
+
+            
           </script>
     </body>
 </html>
